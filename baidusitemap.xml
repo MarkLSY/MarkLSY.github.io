@@ -3,6 +3,38 @@
 
 
     
+  <url>
+    <loc>http://yoursite.com/2018/07/20/GitHub-Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</loc>
+    <lastmod>2018-07-20T11:00:14.662Z</lastmod>
+    <data>
+        <display>
+        <title>GitHub+Hexo搭建个人网站</title>
+        <pubTime>2018-07-20T08:15:42.000Z</pubTime>
+        
+        <tag>test</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/19/hello-world/</loc>
+    <lastmod>2018-07-20T11:00:09.762Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2018-07-19T02:51:39.510Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
     
     
     
@@ -18,21 +50,6 @@
         
         <tag>test</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/07/19/hello-world/</loc>
-    <lastmod>2018-07-19T02:51:39.511Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2018-07-19T02:51:39.510Z</pubTime>
-        
          
            
         </display>
