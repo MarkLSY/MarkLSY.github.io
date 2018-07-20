@@ -15,14 +15,6 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/2018/07/19/test/</loc>
-        <lastmod>2018-07-19T11:55:21.116Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://yoursite.com/2018/07/19/hello-world/</loc>
         <lastmod>2018-07-19T02:51:39.511Z</lastmod>
         <changefreq>weekly</changefreq>
