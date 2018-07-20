@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+    
+    
+    
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/19/knowledge/</loc>
+    <lastmod>2018-07-19T11:57:31.289Z</lastmod>
+    <data>
+        <display>
+        <title>knowledge</title>
+        <pubTime>2018-07-19T03:16:17.000Z</pubTime>
+        
+        <tag>test</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/19/test/</loc>
+    <lastmod>2018-07-19T11:55:21.116Z</lastmod>
+    <data>
+        <display>
+        <title>test</title>
+        <pubTime>2018-07-19T11:55:21.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/19/hello-world/</loc>
+    <lastmod>2018-07-19T02:51:39.511Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2018-07-19T02:51:39.510Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
