@@ -166,13 +166,12 @@
 <p>命令还有很多，这些是比较常用的。其他命令用到的时候可以上网去查，不需要刻意去背命令。</p>
 <h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装Hexo前，需要安装Node.js和Git。安装Node.js的最佳方式是使用nvm:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br><span class="line"></span><br><span class="line">$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure>
 <p>安装完成后，重启终端并执行下列命令即可安装Node.js<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install stable</span><br></pre></td></tr></table></figure></p>
-<p>或者您也可以下载<a href="https://nodejs.org" target="_blank" rel="noopener">安装程序</a>来安装。<br>安装Node.js时，最好不要安装最新版本，安装推荐大多数用户使用那一版本。</p>
+<p>或者您也可以下载<a href="https://nodejs.org" target="_blank" rel="noopener">安装程序</a>来安装。<br>下载安装程序安装Node.js时，最好不要安装最新版本，安装推荐大多数用户使用那一版本。</p>
 <p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>建站之后，在_config.yml中可修改大部分的配置。</p>
-<h4 id="网站存放在子目录"><a href="#网站存放在子目录" class="headerlink" title="网站存放在子目录"></a>网站存放在子目录</h4><p>如果您的网站存放在子目录中，例如 <a href="http://yoursite.com/blog，">http://yoursite.com/blog，</a> 则需要在_config.yml中将 url 设为 <a href="http://yoursite.com/blog">http://yoursite.com/blog</a> 并把 root 设为 /blog/。</p>
+<h4 id="网站存放在子目录"><a href="#网站存放在子目录" class="headerlink" title="网站存放在子目录"></a>网站存放在子目录</h4><p>如果您的网站存放在子目录中，例如 <code>http://yoursite.com/blog</code> ， 则需要在_config.yml中将 url 设为 <code>http://yoursite.com/blog</code>并把 root 设为 /blog/。</p>
 <p>在开始之前，您必须先在_config.yml中修改参数，一个正确的部署配置中至少要有type参数，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br></pre></td></tr></table></figure></p>
 <h3 id="常用命令-1"><a href="#常用命令-1" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="init"><a href="#init" class="headerlink" title="init"></a>init</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [folder]</span><br></pre></td></tr></table></figure>
 <p>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
@@ -187,7 +186,7 @@
 <p>上边两条命令可以简写为：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure></p>
 <p>表示生成文件之后立即部署网站。</p>
 <h4 id="server"><a href="#server" class="headerlink" title="server"></a>server</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
+<p>启动服务器。默认情况下，访问网址为： <code>http://localhost:4000/</code>。</p>
 <h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>创建 Hexo 主题非常容易，您只要在 themes 文件夹内，新增一个任意名称的文件夹，并修改_config.yml内的theme设定，即可切换主题。</p>
 <p>每个主题都会给出详细的具体操作流程。在您选定主题后，根据流程即可成功切换主题。</p>
 
