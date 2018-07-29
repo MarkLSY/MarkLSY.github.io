@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2018/07/29/nginx-php-mysql/</loc>
+        <lastmod>2018-07-29T04:08:59.607Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2018/07/20/GitHub-Hexo/</loc>
         <lastmod>2018-07-29T03:45:16.277Z</lastmod>
         <changefreq>weekly</changefreq>
