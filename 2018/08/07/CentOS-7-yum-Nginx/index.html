@@ -35,7 +35,7 @@
 
 
 
-  <meta name="description" content="nginx-php-mysql之间的联系">
+  <meta name="description" content="CentOS 7 yum 安装 Nginx">
 
 
 
@@ -43,7 +43,7 @@
 
 <link rel="stylesheet" href="/css/style.css">
 
-  <title> nginx-php-mysql之间的联系 || Hexo </title>
+  <title> CentOS 7 yum 安装 Nginx || Hexo </title>
 </head>
 <body>
   <div class="mobile-navbar" id="mobileNavbar">
@@ -138,13 +138,13 @@
   <article class="post">
     <h1 class="post-title">
       
-        nginx-php-mysql之间的联系
+        CentOS 7 yum 安装 Nginx
       
     </h1>
     <div class="post-pub">
       <div class="post-date">
         <i class="iconfont">&#xe64d;</i>
-        <span>2018-07-29</span>
+        <span>2018-08-07</span>
       </div>
       <div class="post-cat">
         
@@ -155,11 +155,16 @@
       
 
       
-        <h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h2><p>Nginx (engine x是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。2011年6月1日，nginx 1.0.4发布。Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。</p>
-<h2 id="php"><a href="#php" class="headerlink" title="php"></a>php</h2><p>PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理器”）是一种通用开源脚本语言。语法吸收了C语言、Java和Perl的特点，利于学习，使用广泛，主要适用于Web开发领域。PHP 独特的语法混合了C、Java、Perl以及PHP自创的语法。它可以比CGI或者Perl更快速地执行动态网页。用PHP做出的动态页面与其他的编程语言相比，PHP是将程序嵌入到HTML（标准通用标记语言下的一个应用）文档中去执行，执行效率比完全生成HTML标记的CGI要高许多；PHP还可以执行编译后代码，编译可以达到加密和优化代码运行，使代码运行更快。</p>
-<h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><p>MySQL是一种开放源代码的关系型数据库管理系统（RDBMS），使用最常用的数据库管理语言–结构化查询语言（SQL）进行数据库管理。MySQL是开放源代码的，因此任何人都可以在General Public License的许可下下载并根据个性化的需要对其进行修改。MySQL因为其速度、可靠性和适应性而备受关注。大多数人都认为在不需要事务化处理的情况下，MySQL是管理内容最好的选择。</p>
-<h2 id="三者之间的联系"><a href="#三者之间的联系" class="headerlink" title="三者之间的联系"></a>三者之间的联系</h2><p>大部分网站都有介绍三者之间的联系。在这里我就用最通俗的话来解释一下三者之间到底是怎么紧密结合的。</p>
-<p>以一个登陆页面为例：<br>在客户端输入登陆用户名和密码之后，一直在监听端口的nginx（通常监听的是80端口）会立即作出反应，告诉php有用户在客户端登陆了，并把用户输入的信息传给php。php则会利用php代码在MySQL数据库中查找，查找是否有该用户的信息。之后php会将得到的信息再回传给nginx，nginx则对客户端做出相应的回应。如果数据库中有该用户信息，则客户端会显示登陆成功；若数据库中没有该用户信息，则客户端会显示用户名或密码错误。</p>
+        <h2 id="1-添加Nginx到YUM源"><a href="#1-添加Nginx到YUM源" class="headerlink" title="1.添加Nginx到YUM源"></a>1.添加Nginx到YUM源</h2><p>  添加CentOS 7 Nginx yum资源库,打开终端,使用以下命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-安装Nginx"><a href="#2-安装Nginx" class="headerlink" title="2.安装Nginx"></a>2.安装Nginx</h2><p>  在你的CentOS 7 服务器中使用yum命令从Nginx源服务器中获取来安装Nginx：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y nginx</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-启动Nginx"><a href="#3-启动Nginx" class="headerlink" title="3.启动Nginx"></a>3.启动Nginx</h2><p>  刚安装的Nginx不会自行启动。运行Nginx:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start nginx.service</span><br></pre></td></tr></table></figure></p>
+<p>  如果一切进展顺利的话，现在你可以通过你的域名或IP来访问你的Web页面来预览一下Nginx的默认页面；如果看到Welcome to nginx! 页面,那么说明你的CentOS 7 中 web服务器已经正确安装。</p>
+<h2 id="CentOS-7-开机启动Nginx"><a href="#CentOS-7-开机启动Nginx" class="headerlink" title="CentOS 7 开机启动Nginx"></a>CentOS 7 开机启动Nginx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> nginx.service</span><br></pre></td></tr></table></figure>
+<h2 id="Nginx配置信息"><a href="#Nginx配置信息" class="headerlink" title="Nginx配置信息"></a>Nginx配置信息</h2><p>  网站文件存放默认目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/share/nginx/html</span><br></pre></td></tr></table></figure></p>
+<p>  网站默认站点配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/nginx/conf.d/default.conf</span><br></pre></td></tr></table></figure></p>
+<p>  自定义Nginx站点配置文件存放目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/nginx/conf.d/</span><br></pre></td></tr></table></figure></p>
+<p>  Nginx全局配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure></p>
+<p>  Nginx启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -c nginx.conf</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -177,15 +182,9 @@
   
   <nav class="post-nav">
     
-      <a href="/2018/08/07/CentOS-7-yum-Nginx/" class="prev">
-        <i class="iconfont">&#xe619;</i>
-        <span class="prev-text nav-default">CentOS 7 yum 安装 Nginx</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a href="/2018/07/20/GitHub-Hexo/" class="next">
-        <span class="next-text nav-default">GitHub+Hexo搭建个人网站</span>
+      <a href="/2018/07/29/nginx-php-mysql/" class="next">
+        <span class="next-text nav-default">nginx-php-mysql之间的联系</span>
         <span class="next-text nav-mobile">下一篇</span>
         <i class="iconfont">&#xe60e;</i>
       </a>

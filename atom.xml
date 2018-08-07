@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-29T04:46:12.930Z</updated>
+  <updated>2018-08-07T02:43:41.730Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS 7 yum 安装 Nginx</title>
+    <link href="http://yoursite.com/2018/08/07/CentOS-7-yum-Nginx/"/>
+    <id>http://yoursite.com/2018/08/07/CentOS-7-yum-Nginx/</id>
+    <published>2018-08-07T02:29:01.000Z</published>
+    <updated>2018-08-07T02:43:41.730Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-添加Nginx到YUM源"><a href="#1-添加Nginx到YUM源" class="headerlink" title="1.添加Nginx到YUM源"></a>1.添加Nginx到YUM源</h2><p>  添加CentOS 7 Nginx yum资源库,打开终端,使用以下命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm</span><br></pre></td></tr></table></figure></p><h2 id="2-安装Nginx"><a href="#2-安装Nginx" class="headerlink" title="2.安装Nginx"></a>2.安装Nginx</h2><p>  在你的CentOS 7 服务器中使用yum命令从Nginx源服务器中获取来安装Nginx：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y nginx</span><br></pre></td></tr></table></figure></p><h2 id="3-启动Nginx"><a href="#3-启动Nginx" class="headerlink" title="3.启动Nginx"></a>3.启动Nginx</h2><p>  刚安装的Nginx不会自行启动。运行Nginx:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start nginx.service</span><br></pre></td></tr></table></figure></p><p>  如果一切进展顺利的话，现在你可以通过你的域名或IP来访问你的Web页面来预览一下Nginx的默认页面；如果看到Welcome to nginx! 页面,那么说明你的CentOS 7 中 web服务器已经正确安装。</p><h2 id="CentOS-7-开机启动Nginx"><a href="#CentOS-7-开机启动Nginx" class="headerlink" title="CentOS 7 开机启动Nginx"></a>CentOS 7 开机启动Nginx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> nginx.service</span><br></pre></td></tr></table></figure><h2 id="Nginx配置信息"><a href="#Nginx配置信息" class="headerlink" title="Nginx配置信息"></a>Nginx配置信息</h2><p>  网站文件存放默认目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/share/nginx/html</span><br></pre></td></tr></table></figure></p><p>  网站默认站点配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/nginx/conf.d/default.conf</span><br></pre></td></tr></table></figure></p><p>  自定义Nginx站点配置文件存放目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/nginx/conf.d/</span><br></pre></td></tr></table></figure></p><p>  Nginx全局配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure></p><p>  Nginx启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -c nginx.conf</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-添加Nginx到YUM源&quot;&gt;&lt;a href=&quot;#1-添加Nginx到YUM源&quot; class=&quot;headerlink&quot; title=&quot;1.添加Nginx到YUM源&quot;&gt;&lt;/a&gt;1.添加Nginx到YUM源&lt;/h2&gt;&lt;p&gt;  添加CentOS 7 Nginx yum
+      
+    
+    </summary>
+    
+    
+      <category term="test" scheme="http://yoursite.com/tags/test/"/>
+    
+  </entry>
   
   <entry>
     <title>nginx-php-mysql之间的联系</title>
